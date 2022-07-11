@@ -43,9 +43,6 @@ username =prop.getProperty("username");
 			return url;
 	
 	}
-
-	
-	
 	public static String getUserNane() throws IOException {
 		  if (username == null) {
 		   Conreader();
