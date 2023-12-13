@@ -23,26 +23,12 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 public class Stepdefinition extends Baseclass {
-	// public WebDriver driver;
+	
 
-	/*
-	 * Stepdefinition(WebDriver driver){ this.driver=driver; }
-	 */
-	// Properties pro=new Properties();
-
-	@Given("login in to face book app")
-	public void login_in_to_face_book_app() throws InterruptedException, IOException {
-		// Write code here that turns the phrase above into concrete actions
-		// System.setProperty("webdriver.chrome.driver", "D:\\chromedriver.exe");
+	@Given("login in to app")
+	public void login_in_to_app() throws InterruptedException, IOException {
 		launchBrowser();
-		// driver=new ChromeDriver();
-		// Thread.sleep(2000);
-
-		// Configfilereader config=new Configfilereader();
-		// driver.get("https://www.facebook.com");
-		String url = Configfilereader.getPath();
-		System.out.println("urll:" + url);
-		driver.get(url);
+		Thread.sleep(2000);
 	}
 
 	@When("enter username")
