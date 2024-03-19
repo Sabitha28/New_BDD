@@ -29,8 +29,7 @@ public class Stepdefinition extends Baseclass {
 	public void login_in_to__app() throws InterruptedException, IOException {
 		// Write code here that turns the phrase above into concrete actions
 		
-		launchBrowser();
-		
+		setup();
 		Thread.sleep(2000);
 	}
 
