@@ -15,8 +15,14 @@ import io.cucumber.junit.CucumberOptions;
 			,monochrome=true
 			,plugin= {"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"}
 			)
+public class TestRunner extends Baseclass {	
 
-	public class TestRunner {	
+@AfterMethod
+public void addScreenshot(Scenario scenario) {
+
+	final byte[] screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
+	scenario.attach(screenshot, "image/png", "image");
+
 }
-
+}
 
